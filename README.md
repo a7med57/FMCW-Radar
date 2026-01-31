@@ -26,17 +26,17 @@ The radar parameters were calculated to meet specific automotive constraints:
 
 ### 1. Waveform Generation
 [cite_start]The system generates LFM chirps with a sweep time of $2.1 \mu s$[cite: 335].
-![Transmitted Signal](images/TX.png)
+![Transmitted Signal](FMCW-Radar-Simulation/images/TX.png)
 *Figure 1: The transmitted FMCW sawtooth waveform and pulse train.*
 
 ### 2. Received Signal & Mixing
 Echoes are received with time delays (range) and phase shifts (Doppler). [cite_start]White Gaussian Noise is added to simulate realistic SNR conditions (5dB, 10dB, 15dB)[cite: 446].
-![Received Signal](images/RX.png)
+![Received Signal](FMCW-Radar-Simulation/images/RX.png)
 *Figure 2: The received radar echo signal with additive noise.*
 
 ### 3. Detection & Range-Doppler Mapping
 The beat signal is processed using a 2D-FFT. The 3D Range-Doppler Map visualizes targets as distinct peaks in the Range-Velocity plane.
-![Range Doppler Map](images/range_doppler_map.png)
+![Range Doppler Map](FMCW-Radar-Simulation/images/range_doppler_map.png)
 *Figure 3: 3D Range-Doppler Map showing clear target separation.*
 
 ---
@@ -45,7 +45,7 @@ The beat signal is processed using a 2D-FFT. The 3D Range-Doppler Map visualizes
 
 The algorithm was validated against "Ground Truth" targets. The detection error was negligible, demonstrating the robustness of the peak detection algorithm.
 
-![Detection Results](images/detection_results.png)
+![Detection Results](FMCW-Radar-Simulation/images/detection_results.png)
 *Figure 4: MATLAB Console output showing precise estimation of range and velocity.*
 
 **Accuracy Summary:**
@@ -56,5 +56,5 @@ The algorithm was validated against "Ground Truth" targets. The detection error 
 
 ## How to Run
 1.  Clone this repository.
-2.  Open `src/FMCW.m` in MATLAB.
+2.  Open `FMCW-Radar-Simulation/src/FMCW.m` in MATLAB.
 3.  Run the script to generate the waveforms and detection results.
